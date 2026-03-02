@@ -1,0 +1,165 @@
+{"folders":[
+		{
+			"name": ".tmc",
+			"path": "../../../../Users/Marko opiskelu/AppData/Roaming/Code/User/globalStorage/moocfi.test-my-code/workspaces/.tmc"
+		},
+		{
+			"name": "part_08-001_nicknames",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_08-001_nicknames"
+		},
+		{
+			"name": "part_08-002_abbreviations",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_08-002_abbreviations"
+		},
+		{
+			"name": "part_08-003_print_dictionary_keys",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_08-003_print_dictionary_keys"
+		},
+		{
+			"name": "part_08-004_book_dictionary",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_08-004_book_dictionary"
+		},
+		{
+			"name": "part_08-005_i_owe_you",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_08-005_i_owe_you"
+		},
+		{
+			"name": "part_08-006_same_date",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_08-006_same_date"
+		},
+		{
+			"name": "part_08-007_vehicle_registry",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_08-007_vehicle_registry"
+		},
+		{
+			"name": "part_08-008_dictionary_of_many_translations",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_08-008_dictionary_of_many_translations"
+		},
+		{
+			"name": "part_08-009_storage_facility",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_08-009_storage_facility"
+		},
+		{
+			"name": "part_09-001_abc",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_09-001_abc"
+		},
+		{
+			"name": "part_09-002_person_and_subclasses",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_09-002_person_and_subclasses"
+		},
+		{
+			"name": "part_09-003_warehousing",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_09-003_warehousing"
+		},
+		{
+			"name": "part_09-004_different_boxes",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_09-004_different_boxes"
+		},
+		{
+			"name": "part_09-005_taco_boxes",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_09-005_taco_boxes"
+		},
+		{
+			"name": "part_09-006_interface_in_a_box",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_09-006_interface_in_a_box"
+		},
+		{
+			"name": "part_09-007_herds",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_09-007_herds"
+		},
+		{
+			"name": "part_09-008_animals",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_09-008_animals"
+		},
+		{
+			"name": "part_10-001_wage_order",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_10-001_wage_order"
+		},
+		{
+			"name": "part_10-002_students_in_alphabetical_order",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_10-002_students_in_alphabetical_order"
+		},
+		{
+			"name": "part_10-003_literacy_comparison",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_10-003_literacy_comparison"
+		},
+		{
+			"name": "part_10-004_regular_expressions_checker",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_10-004_regular_expressions_checker"
+		},
+		{
+			"name": "part_10-005_sort_them_cards",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_10-005_sort_them_cards"
+		},
+		{
+			"name": "part_11-001_dice",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_11-001_dice"
+		},
+		{
+			"name": "part_11-002_lottery_row",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_11-002_lottery_row"
+		},
+		{
+			"name": "part_11-003_argument_exception",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_11-003_argument_exception"
+		},
+		{
+			"name": "part_11-004_sensors_and_temperature",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_11-004_sensors_and_temperature"
+		},
+		{
+			"name": "part_11-005_saveable_dictionary",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_11-005_saveable_dictionary"
+		},
+		{
+			"name": "part_12-001_namespace_example",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_12-001_namespace_example"
+		},
+		{
+			"name": "part_12-002_using_directives",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_12-002_using_directives"
+		},
+		{
+			"name": "part_12-003_aliases",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_12-003_aliases"
+		},
+		{
+			"name": "part_12-004_using_streamwriter",
+			"path": "../../TMC/centria-IT00AK36-3008-csharp-advanced/part_12-004_using_streamwriter"
+		},
+		{
+			"name": "IT00AK36-3008-csharp-advanced",
+			"path": "../IT00AK36-3008-csharp-advanced"
+		}
+	],"settings":{"explorer.decorations.colors":false,"files.autoSave":"onFocusChange","files.exclude":{
+            "**/.git": true,
+            "**/.svn": true,
+            "**/.hg": true,
+            "**/.DS_Store": true,
+            "**/Thumbs.db": true,
+            "**/__pycache__": true,
+            "**/.available_points.json": true,
+            "**/.tmc_test_results.json": true,
+            "**/.tmcproject.yml": true,
+            "**/tmc": true,
+            "**/.settings": true,
+            "**/.tmcproject.json": true,
+            "**/.tmc.json": true,
+            "**/.tmc.lock": true,
+            "**/.tmc_test_results.hmac.sha256": true
+        },
+        "files.watcherExclude": {
+            "**/.git/objects/**": true,
+            "**/.git/subtree-cache/**": true,
+            "**/.hg/store/**": true,
+            "**/.vscode/**": true,
+            "**/.tmc.json": true
+        },
+        "problems.decorations.enabled": false,
+        "workbench.editor.closeOnFileDelete": true,
+        "testMyCode.downloadOldSubmission": true,
+        "testMyCode.hideMetaFiles": true,
+        "testMyCode.updateExercisesAutomatically": true,
+        "explorer.decorations.badges": true
+    }
+}
