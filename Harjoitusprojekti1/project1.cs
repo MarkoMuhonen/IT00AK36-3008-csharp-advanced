@@ -95,15 +95,20 @@ public class Program
         // TODO: TryGetValue + säännöt
         // Yritetään myydä tuotetta, tarkistetaan ensin löytyykö tuote ja onko tarpeeksi varastossa
               
-        if (stock.TryGetValue(name, out int currentAmount)      // testataan löytyykö tuotetta 
-            && currentAmount >= amount)                         // ja onko määrä riittävä
+        if (!stock.TryGetValue(name, out int currentAmount))      // jos tuotetta ei ole 
         {
-            stock[name] -= amount;                              // vähennetään varastoa
-            Console.WriteLine("Sold " + amount + " of " + name);
+            Console.WriteLine("Not found: " + name);    // tulostetaan virheilmoitus
+            return;
+        }
+        if (currentAmount < amount)                            // jos varastosaldo pienempi kuin myytävä määrä, ilmoitetaan ettei voida myydä
+        {
+            Console.WriteLine("Not enough stock: " + name);
+            return;
         }
         else
         {
-            Console.WriteLine("Can't sell " + amount + " of " + name); // ilmoitetaan, jos tuotetta ei löydy riittävästi
+            stock[name] -= amount;                             // vähennetään myyty määrä varastosta
+            Console.WriteLine("Sold" + amount + " " + name);
         }
     }
 
@@ -113,11 +118,11 @@ public class Program
         //  Poistetaan tuote varastosta, ilmoitetaan jos tuotetta ei löydy
             if (stock.Remove(name))
             {
-                Console.WriteLine("Removed product: " + name);
+                Console.WriteLine("Removed: " + name);
             }
             else
             {
-                Console.WriteLine("Nothing to remove: " + name);
+                Console.WriteLine("Not found: " + name);
             }
             
     }
