@@ -32,9 +32,6 @@ Palautettavat dokumentit:
 public class Program
 {
 
-//
-// Projektin päämetodi, jossa simuloidaan ja testataan varaston toimintoja
-
     public static void Main()
     {
         Dictionary<string, int> stock = new Dictionary<string, int>(); // luodaan varasto sanakirjana
@@ -108,7 +105,7 @@ public class Program
         else
         {
             stock[name] -= amount;                             // vähennetään myyty määrä varastosta
-            Console.WriteLine("Sold" + amount + " " + name);
+            Console.WriteLine("Sold " + amount + " " + name);
         }
     }
 
