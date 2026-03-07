@@ -53,7 +53,7 @@ public class Program
         TrySell(stock, "Cheese", 1);
 
         RemoveProduct(stock, "Bread"); // poistetaan tuote varastosta
-        RemoveProduct(stock, "Bread");
+        RemoveProduct(stock, "Bread"); // poistetaan, mutta ei tuotetta ei ole, koska poistettu jo aiemmin -> virheilmoitus
 
         Console.WriteLine();
         PrintStock(stock);
@@ -79,6 +79,7 @@ public class Program
     static void AddOrIncrease(Dictionary<string, int> stock, string name, int amount)
     {
         // TODO: ContainsKey + Add / kasvatus
+        // Jos tuote löytyy, lisätään määrää, tai luodaan uusi tuote varastoon
         if (stock.ContainsKey(name))
         {
             stock[name] += amount;
@@ -92,6 +93,18 @@ public class Program
     static void TrySell(Dictionary<string, int> stock, string name, int amount)
     {
         // TODO: TryGetValue + säännöt
+        // Yritetään myydä tuotetta, tarkistetaan ensin löytyykö tuote ja onko tarpeeksi varastossa
+              
+        if (stock.TryGetValue(name, out int currentAmount)      // testataan löytyykö tuotetta 
+            && currentAmount >= amount)                         // ja onko määrä riittävä
+        {
+            stock[name] -= amount;                              // vähennetään varastoa
+            Console.WriteLine("Sold " + amount + " of " + name);
+        }
+        else
+        {
+            Console.WriteLine("Can't sell " + amount + " of " + name); // ilmoitetaan, jos tuotetta ei löydy riittävästi
+        }
     }
 
     static void RemoveProduct(Dictionary<string, int> stock, string name)
