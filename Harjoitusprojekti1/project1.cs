@@ -48,7 +48,7 @@ public class Program
         AddOrIncrease(stock, "Milk", 3); //lisätään lisää tuotteita
         AddOrIncrease(stock, "Banana", 7);
 
-        TrySell(stock, "Apple", 5); // yritetään myydä tuotteita
+        TrySell(stock, "Apple", 5);     // yritetään myydä tuotteita
         TrySell(stock, "Apple", 500);
         TrySell(stock, "Cheese", 1);
 
@@ -56,23 +56,23 @@ public class Program
         RemoveProduct(stock, "Bread"); // poistetaan, mutta ei tuotetta ei ole, koska poistettu jo aiemmin -> virheilmoitus
 
         Console.WriteLine();
-        PrintStock(stock);
+        PrintStock(stock);              // tulostetaan varaston sisältö
 
-        // Ryhmittely
+        // Ryhmittely, luodaan uusi sanakirja tuoteryhmille
         Dictionary<string, List<string>> categories = new Dictionary<string, List<string>>();
-        AddToCategory(categories, "Dairy", "Milk");
+        AddToCategory(categories, "Dairy", "Milk"); // lisätään tuotteita tuoteryhmiin
         AddToCategory(categories, "Fruit", "Apple");
         AddToCategory(categories, "Fruit", "Banana");
 
         Console.WriteLine();
-        PrintCategories(categories);
+        PrintCategories(categories);    // tulostetaan tuoteryhmät ja tuotteet
     }
 
     static void PrintStock(Dictionary<string, int> stock)
     {
-        foreach (var pair in stock)
+        foreach (var pair in stock)                             //käydään varaston tuotteet läpi
         {
-            Console.WriteLine(pair.Key + ": " + pair.Value);
+            Console.WriteLine(pair.Key + ": " + pair.Value);    // tulostetaan tuote ja määrä
         }
     }
 
@@ -126,6 +126,7 @@ public class Program
     {
         // TODO: ContainsKey/TryGetValue + lista
         // AddToCategory(categories, "Dairy", "Milk");
+        // Lisätään tuote tuoteryhmään, luodaan tarvittaessa uusi ryhmä
         if (!categories.ContainsKey(category))
         {
             categories.Add(category, new List<string>());
@@ -134,7 +135,8 @@ public class Program
     }
 
     static void PrintCategories(Dictionary<string, List<string>> categories)
-    {
+    {   
+        // käydään läpi tuoteryhmät ja tulostetaan ryhmän nimi ja tuotteet
         foreach (var pair in categories)
         {
             Console.WriteLine(pair.Key + ":");
