@@ -1,0 +1,15 @@
+C:\Opiskelut\Csharp\Harjoitusprojektit\IT00AK36-3008-csharp-advanced\Harjoitusprojekti2\bin\Debug\net8.0\Harjoitusprojekti2.exe
+C:\Opiskelut\Csharp\Harjoitusprojektit\IT00AK36-3008-csharp-advanced\Harjoitusprojekti2\bin\Debug\net8.0\Harjoitusprojekti2.deps.json
+C:\Opiskelut\Csharp\Harjoitusprojektit\IT00AK36-3008-csharp-advanced\Harjoitusprojekti2\bin\Debug\net8.0\Harjoitusprojekti2.runtimeconfig.json
+C:\Opiskelut\Csharp\Harjoitusprojektit\IT00AK36-3008-csharp-advanced\Harjoitusprojekti2\bin\Debug\net8.0\Harjoitusprojekti2.dll
+C:\Opiskelut\Csharp\Harjoitusprojektit\IT00AK36-3008-csharp-advanced\Harjoitusprojekti2\bin\Debug\net8.0\Harjoitusprojekti2.pdb
+C:\Opiskelut\Csharp\Harjoitusprojektit\IT00AK36-3008-csharp-advanced\Harjoitusprojekti2\obj\Debug\net8.0\Harjoitusprojekti2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Opiskelut\Csharp\Harjoitusprojektit\IT00AK36-3008-csharp-advanced\Harjoitusprojekti2\obj\Debug\net8.0\Harjoitusprojekti2.AssemblyInfoInputs.cache
+C:\Opiskelut\Csharp\Harjoitusprojektit\IT00AK36-3008-csharp-advanced\Harjoitusprojekti2\obj\Debug\net8.0\Harjoitusprojekti2.AssemblyInfo.cs
+C:\Opiskelut\Csharp\Harjoitusprojektit\IT00AK36-3008-csharp-advanced\Harjoitusprojekti2\obj\Debug\net8.0\Harjoitusprojekti2.csproj.CoreCompileInputs.cache
+C:\Opiskelut\Csharp\Harjoitusprojektit\IT00AK36-3008-csharp-advanced\Harjoitusprojekti2\obj\Debug\net8.0\Harjoitusprojekti2.sourcelink.json
+C:\Opiskelut\Csharp\Harjoitusprojektit\IT00AK36-3008-csharp-advanced\Harjoitusprojekti2\obj\Debug\net8.0\Harjoitusprojekti2.dll
+C:\Opiskelut\Csharp\Harjoitusprojektit\IT00AK36-3008-csharp-advanced\Harjoitusprojekti2\obj\Debug\net8.0\refint\Harjoitusprojekti2.dll
+C:\Opiskelut\Csharp\Harjoitusprojektit\IT00AK36-3008-csharp-advanced\Harjoitusprojekti2\obj\Debug\net8.0\Harjoitusprojekti2.pdb
+C:\Opiskelut\Csharp\Harjoitusprojektit\IT00AK36-3008-csharp-advanced\Harjoitusprojekti2\obj\Debug\net8.0\Harjoitusprojekti2.genruntimeconfig.cache
+C:\Opiskelut\Csharp\Harjoitusprojektit\IT00AK36-3008-csharp-advanced\Harjoitusprojekti2\obj\Debug\net8.0\ref\Harjoitusprojekti2.dll
