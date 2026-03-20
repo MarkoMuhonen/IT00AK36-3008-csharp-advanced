@@ -3,6 +3,9 @@ using System;
 namespace Harjoitusprojekti3
 {
     class Event : IComparable<Event>
+
+    // Luokka Event, joka sisältää tapahtuman tiedot ja vertailumetodin
+
     {
         public string Id;
         public string Title;
@@ -24,9 +27,9 @@ namespace Harjoitusprojekti3
 
         public int CompareTo(Event other)
         {
-            // TODO:
-            // 1) Järjestä Start-ajan mukaan
-            // 2) Jos sama Start, järjestä Title aakkosjärjestykseen
+            // TODO: -
+            // Lisätty 1) Järjestä Start-ajan mukaan
+            // Lisätty 2) Jos sama Start, järjestä Title aakkosjärjestykseen
 
             int timeCompare = this.Start.CompareTo(other.Start);
             if (timeCompare != 0)

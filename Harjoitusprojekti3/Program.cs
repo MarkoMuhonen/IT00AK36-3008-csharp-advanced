@@ -11,8 +11,10 @@ namespace Harjoitusprojekti3
             List<Event> events = new List<Event>();
 
             // TODO: -
-            // Added test data for events, Ok/Not ok cases, duplicate IDs, invalid IDs
-            // Added new method ValidateAndAddEvent, which validates the evet ID
+            // Lisätty testidataa tapahtumille, Ok/Ei ok tapauksia, duplikaatti ID:itä, vääränlaisia ID:itä
+            // Lisättty uusi metodi ValidateAndAddEvent, joka tarkistaa tapahtuman ID:n ennen lisäystä
+            //
+            // TESTIDATA ALKAA TÄSTÄ
 
             ValidateAndAddEvent(events, new Event("EVT-2026-009", "English Exam",
                 new DateTime(2026, 5, 20, 16, 0, 0),
@@ -82,7 +84,9 @@ namespace Harjoitusprojekti3
             PrintAll(events);
             
             
-        }
+        }      // TESTIDATA PÄÄTTYY TÄHÄN
+
+    
 
         // ---------- METODIT ----------
 
