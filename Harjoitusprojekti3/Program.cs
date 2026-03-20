@@ -10,7 +10,9 @@ namespace Harjoitusprojekti3
         {
             List<Event> events = new List<Event>();
 
-            // TODO: Lisää tapahtumia listaan (käytä IsValidEventId ennen lisäystä)
+            // TODO: -
+            // Added test data for events, Ok/Not ok cases, duplicate IDs, invalid IDs
+            // Added new method ValidateAndAddEvent, which validates the evet ID
 
             ValidateAndAddEvent(events, new Event("EVT-2026-009", "English Exam",
                 new DateTime(2026, 5, 20, 16, 0, 0),
@@ -41,6 +43,19 @@ namespace Harjoitusprojekti3
                 180,
                 EventType.Workshop,
                 EventStatus.Planned));
+            
+            ValidateAndAddEvent(events, new Event("EVT-2026-002", "Workshop: Hit",
+                new DateTime(2026, 4, 10, 9, 0, 0),
+                180,
+                EventType.Workshop,
+                EventStatus.Planned));
+            
+            ValidateAndAddEvent(events, new Event("EVT-2026-002", "Workshop: Iit",
+                new DateTime(2026, 4, 10, 9, 0, 0),
+                180,
+                EventType.Workshop,
+                EventStatus.Planned));
+            
 
             Console.WriteLine("Events before sorting:");
             PrintAll(events);
@@ -57,8 +72,16 @@ namespace Harjoitusprojekti3
             Console.WriteLine("\nCancelling EVT-2026-002:");
             CancelEventById(events, "EVT-2026-002");
 
+            Console.WriteLine("\nCancelling EVT-2026-002:");
+            CancelEventById(events, "EVT-2026-999");
+
+            Console.WriteLine("\nPrint events by status:");
+            PrintByStatus(events, EventStatus.Cancelled);
+
             Console.WriteLine("\nEvents after cancellation:");
             PrintAll(events);
+            
+            
         }
 
         // ---------- METODIT ----------
@@ -72,14 +95,22 @@ namespace Harjoitusprojekti3
 
         static void ValidateAndAddEvent(List<Event> events, Event ev)
         {
-            if (IsValidEventId(ev.Id))
-            {
-                events.Add(ev);
-            }
-            else
+            if (!IsValidEventId(ev.Id))
             {
                 Console.WriteLine("Invalid event ID: " + ev.Id);
+                return;
             }
+
+            foreach (Event existingEvent in events)
+            {
+                if (existingEvent.Id == ev.Id)
+                {
+                    Console.WriteLine("Duplicate event ID: " + ev.Id);
+                    return;
+                }
+            }
+
+            events.Add(ev);
         }
 
 
@@ -134,7 +165,7 @@ namespace Harjoitusprojekti3
 
             if (!found)
             {
-                Console.WriteLine("Event not found");
+                Console.WriteLine("Not found");
             }
         }
     }
