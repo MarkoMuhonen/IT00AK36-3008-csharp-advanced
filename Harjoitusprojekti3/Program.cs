@@ -23,16 +23,16 @@ namespace Harjoitusprojekti3
                 EventStatus.Planned));
 
             ValidateAndAddEvent(events, new Event("EVT-26-1", "Math Exam",
-            new DateTime(2026, 5, 20, 14, 0, 0),
-            120,
-            EventType.Exam,
-            EventStatus.Planned));
+                new DateTime(2026, 5, 20, 14, 0, 0),
+                120,
+                EventType.Exam,
+                EventStatus.Planned));
 
             ValidateAndAddEvent(events, new Event("", "Italian Exam",
-            new DateTime(2026, 5, 20, 12, 0, 0),
-            120,
-            EventType.Exam,
-            EventStatus.Planned));
+                new DateTime(2026, 5, 20, 12, 0, 0),
+                120,
+                EventType.Exam,
+                EventStatus.Planned));
 
             ValidateAndAddEvent(events, new Event("EVT-2026-001", "C# Lecture",
                 new DateTime(2026, 4, 10, 10, 0, 0),
@@ -45,24 +45,25 @@ namespace Harjoitusprojekti3
                 180,
                 EventType.Workshop,
                 EventStatus.Planned));
-            
+
             ValidateAndAddEvent(events, new Event("EVT-2026-002", "Workshop: Hit",
                 new DateTime(2026, 4, 10, 9, 0, 0),
                 180,
                 EventType.Workshop,
                 EventStatus.Planned));
-            
+
             ValidateAndAddEvent(events, new Event("EVT-2026-002", "Workshop: Iit",
                 new DateTime(2026, 4, 10, 9, 0, 0),
                 180,
                 EventType.Workshop,
                 EventStatus.Planned));
-            
+
 
             Console.WriteLine("Events before sorting:");
             PrintAll(events);
 
-            // TODO: Järjestä tapahtumat (Sort)
+            // TODO: --
+            // LISÄTTY: Järjestä tapahtumat (Sort)
             events.Sort();
 
             Console.WriteLine("\nEvents after sorting:");
@@ -82,11 +83,11 @@ namespace Harjoitusprojekti3
 
             Console.WriteLine("\nEvents after cancellation:");
             PrintAll(events);
-            
-            
+
+
         }      // TESTIDATA PÄÄTTYY TÄHÄN
 
-    
+
 
         // ---------- METODIT ----------
 
