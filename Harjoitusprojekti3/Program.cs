@@ -91,12 +91,7 @@ namespace Harjoitusprojekti3
 
         // ---------- METODIT ----------
 
-        static bool IsValidEventId(string id)
-        {
-            // EVT-YYYY-NNN
-            string pattern = @"^EVT-[0-9]{4}-[0-9]{3}$";
-            return Regex.IsMatch(id, pattern);
-        }
+        
 
         static void ValidateAndAddEvent(List<Event> events, Event ev)
         {
@@ -118,6 +113,12 @@ namespace Harjoitusprojekti3
             events.Add(ev);
         }
 
+        static bool IsValidEventId(string id)
+        {
+            // EVT-YYYY-NNN
+            string pattern = @"^EVT-[0-9]{4}-[0-9]{3}$";
+            return Regex.IsMatch(id, pattern);
+        }
 
         static void PrintAll(List<Event> events)
         {

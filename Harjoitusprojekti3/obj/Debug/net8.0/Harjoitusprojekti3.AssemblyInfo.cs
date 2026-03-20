@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hp3App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8f572c1fd5f22acb5be3ae1fb64705eb56fbb19")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+441fb2eefb752e9f6e913d97316185d62302a27c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hp3App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hp3App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
