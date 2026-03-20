@@ -39,10 +39,11 @@ namespace Harjoitusprojekti3
 
         public override string ToString()
         {
-            return Id + " | " + Title +
-                   " | " + Start +
-                   " | " + DurationMinutes + " min" +
-                   " | " + Type +
+            return Id + 
+                   " | " + Title.PadRight(15) +
+                   " | " + Start.ToString().PadRight(20) +
+                   " | " + DurationMinutes.ToString().PadRight(5) + " min" +
+                   " | " + Type.ToString().PadRight(8) +
                    " | " + Status;
         }
     }

@@ -11,19 +11,32 @@ namespace Harjoitusprojekti3
             List<Event> events = new List<Event>();
 
             // TODO: Lisää tapahtumia listaan (käytä IsValidEventId ennen lisäystä)
-            events.Add(new Event("EVT-2026-003", "Math Exam",
-                new DateTime(2026, 5, 20, 9, 0, 0),
+
+            ValidateAndAddEvent(events, new Event("EVT-2026-009", "English Exam",
+                new DateTime(2026, 5, 20, 16, 0, 0),
                 120,
                 EventType.Exam,
                 EventStatus.Planned));
 
-            events.Add(new Event("EVT-2026-001", "C# Lecture",
+            ValidateAndAddEvent(events, new Event("EVT-2026-003", "Math Exam",
+            new DateTime(2026, 5, 20, 14, 0, 0),
+            120,
+            EventType.Exam,
+            EventStatus.Planned));
+
+            ValidateAndAddEvent(events, new Event("EVT-2026-008", "Italian Exam",
+            new DateTime(2026, 5, 20, 12, 0, 0),
+            120,
+            EventType.Exam,
+            EventStatus.Planned));
+
+            ValidateAndAddEvent(events, new Event("EVT-2026-001", "C# Lecture",
                 new DateTime(2026, 4, 10, 10, 0, 0),
                 90,
                 EventType.Lecture,
                 EventStatus.Confirmed));
 
-            events.Add(new Event("EVT-2026-002", "Workshop: Git",
+            ValidateAndAddEvent(events, new Event("EVT-2026-002", "Workshop: Git",
                 new DateTime(2026, 4, 10, 9, 0, 0),
                 180,
                 EventType.Workshop,
@@ -56,6 +69,19 @@ namespace Harjoitusprojekti3
             string pattern = @"^EVT-[0-9]{4}-[0-9]{3}$";
             return Regex.IsMatch(id, pattern);
         }
+
+        static void ValidateAndAddEvent(List<Event> events, Event ev)
+        {
+            if (IsValidEventId(ev.Id))
+            {
+                events.Add(ev);
+            }
+            else
+            {
+                Console.WriteLine("Invalid event ID: " + ev.Id);
+            }
+        }
+
 
         static void PrintAll(List<Event> events)
         {
