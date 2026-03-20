@@ -1,0 +1,21 @@
+# Compiled files and build directories
+bin/
+obj/
+
+# Visual Studio cache
+.vs/
+
+# Visual Studio user-specific files
+*.user
+*.userprefs
+
+# IDE cache
+.vscode/
+
+# Runtime files
+*.dll
+*.exe
+*.pdb
+
+# Dependencies
+packages/

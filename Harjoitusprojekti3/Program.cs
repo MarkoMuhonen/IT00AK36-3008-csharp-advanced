@@ -18,13 +18,13 @@ namespace Harjoitusprojekti3
                 EventType.Exam,
                 EventStatus.Planned));
 
-            ValidateAndAddEvent(events, new Event("EVT-2026-003", "Math Exam",
+            ValidateAndAddEvent(events, new Event("EVT-26-1", "Math Exam",
             new DateTime(2026, 5, 20, 14, 0, 0),
             120,
             EventType.Exam,
             EventStatus.Planned));
 
-            ValidateAndAddEvent(events, new Event("EVT-2026-008", "Italian Exam",
+            ValidateAndAddEvent(events, new Event("", "Italian Exam",
             new DateTime(2026, 5, 20, 12, 0, 0),
             120,
             EventType.Exam,
