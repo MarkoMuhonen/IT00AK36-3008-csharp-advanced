@@ -5,26 +5,49 @@ namespace Harjoitusprojekti4
     {
         static void Main(string[] args)
         {
-            // TODO: Luo historia ja lataa tiedosto
-            // GameHistory history = new GameHistory("history.txt");
-            // history.Load();
+            // TODO: -
+            // DONE: 
+            // - Luo historia ja lataa tiedosto
+            GameHistory history = new GameHistory("history.txt");
+            history.Load();
 
-            // TODO: Kysy pelaajan nimi ja luo Player try/catchilla
-            // try { ... } catch (ArgumentException e) { ... }
+            // TODO: -
+            // DONE: 
+            // - Kysy pelaajan nimi ja luo Player try/catchilla
+            // - try { ... } catch (ArgumentException e) { ... }
+            Console.WriteLine("Please enter your name:");
+            string playerName = Console.ReadLine();
+            Player player;
+            
+            try
+            {
+                player = new Player(playerName, new LotteryRow());
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine("Error: " + e.Message);
+                return;
+            }
 
-            // TODO: Luo pelaajan rivi ja voittorivi
-            // LotteryRow myRow = new LotteryRow();
-            // LotteryRow winningRow = new LotteryRow();
+            // TODO: -
+            // DONE: 
+            // - Luo pelaajan rivi ja voittorivi
+            LotteryRow myRow = new LotteryRow();
+            LotteryRow winningRow = new LotteryRow();
 
-            // TODO: Laske osumat
-            // int hits = CountHits(myRow, winningRow);
+            // TODO: -
+            // DONE:
+            // - Laske osumat
+            int hits = CountHits(myRow, winningRow);
 
             // TODO: Lisää tulos historiaan ja tallenna
-            // history.AddLine(...);
-            // history.Save();
+            history.AddLine(player.Name + " | My Row: " + myRow.ToString() + " | Winning Row: " + winningRow.ToString() + " | Hits: " + hits);
+            history.Save();
 
-            // TODO: Tulosta lopuksi historia
-            // history.Print();
+            // TODO: 
+            // DONE: 
+            // - Tulosta lopuksi historia
+            history.Print();
         }
 
         // Apumetodi osumien laskuun (ei LINQiä)

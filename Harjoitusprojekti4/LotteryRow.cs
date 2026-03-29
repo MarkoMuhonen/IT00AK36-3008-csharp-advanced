@@ -12,13 +12,14 @@ namespace Harjoitusprojekti4
             numbers = new List<int>();
             random = new Random();
 
-            // TODO: Arvo numerot
+            // TODO: 
+            // DONE: Arvo numerot
             RandomizeNumbers();
         }
 
         public List<int> Numbers()
         {
-            // Palauta lista (opiskelijatasolla ok)
+            // Palauta lista (opiskelijatasolla ok) ??? mtä tarkoittaa
             return numbers;
         }
 
@@ -30,6 +31,7 @@ namespace Harjoitusprojekti4
         public void RandomizeNumbers()
         {
             // TODO:
+            // DONE:
             // - Tyhjennä lista
             // - Arvo 7 eri numeroa väliltä 1..40
             // - Käytä random.Next(1, 41)
