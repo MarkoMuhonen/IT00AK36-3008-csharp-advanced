@@ -21,7 +21,7 @@ namespace Harjoitusprojekti4
 
         public bool Load()
         {
-            // TODO: 
+            // TODO: -
             // DONE: 
             // - Lue tiedosto File.ReadAllLines try/catchilla
             // - jos onnistuu: täytä lines ja return true

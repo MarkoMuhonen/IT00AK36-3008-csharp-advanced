@@ -41,7 +41,8 @@ namespace Harjoitusprojekti4
             int hits = CountHits(player.MyRow, winningRow);
 
             // TODO: Lisää tulos historiaan ja tallenna
-            history.AddLine(player.Name + " | My Row: " + player.MyRow.ToString() + " | Winning Row: " + winningRow.ToString() + " | Hits: " + hits);
+            // - Historyfileformat: 2026-02-18; Name=Anna; Hits=3; My=...; Win=... 
+            history.AddLine(DateTime.Now.ToString("yyyy-MM-dd") + "; Name=" + player.Name + "; Hits=" + hits + "; My=" + player.MyRow.ToString() + "; Win=" + winningRow.ToString());
             history.Save();
 
             // TODO: 
