@@ -18,10 +18,11 @@ namespace Harjoitusprojekti4
             Console.WriteLine("Please enter your name:");
             string playerName = Console.ReadLine();
             Player player;
+            LotteryRow myRow = new LotteryRow();
             
             try
             {
-                player = new Player(playerName, new LotteryRow());
+                player = new Player(playerName, myRow);
             }
             catch (ArgumentException e)
             {
@@ -32,16 +33,15 @@ namespace Harjoitusprojekti4
             // TODO: -
             // DONE: 
             // - Luo pelaajan rivi ja voittorivi
-            LotteryRow myRow = new LotteryRow();
             LotteryRow winningRow = new LotteryRow();
 
             // TODO: -
             // DONE:
             // - Laske osumat
-            int hits = CountHits(myRow, winningRow);
+            int hits = CountHits(player.MyRow, winningRow);
 
             // TODO: Lisää tulos historiaan ja tallenna
-            history.AddLine(player.Name + " | My Row: " + myRow.ToString() + " | Winning Row: " + winningRow.ToString() + " | Hits: " + hits);
+            history.AddLine(player.Name + " | My Row: " + player.MyRow.ToString() + " | Winning Row: " + winningRow.ToString() + " | Hits: " + hits);
             history.Save();
 
             // TODO: 
