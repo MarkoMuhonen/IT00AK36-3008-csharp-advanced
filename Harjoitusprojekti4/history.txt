@@ -2,3 +2,4 @@
 2026-03-29; Name=Keijo Vilunki; Hits=0; My=18 3 14 21 15 2 30; Win=32 6 17 38 36 12 27
 2026-03-29; Name=Lotto Bete; Hits=1; My=36 39 3 26 8 25 2; Win=35 16 37 26 22 23 38
 2026-03-29; Name=Ingen Tur; Hits=0; My=15 38 34 29 26 5 3; Win=37 9 16 1 6 39 31
+2026-03-29; Name=Testi; Hits=0; My=10 37 12 3 17 5 20; Win=31 9 21 39 7 16 19
