@@ -1,0 +1,111 @@
+IT00AK36-3008 Olio-ohjelmointi ja suunnittelu  
+Kevät 2026 
+Harjoitusprojekti #4 
+Lotto & Pelihistoria (Random, Files, Exceptions) 
+Tavoite 
+Rakennat C#-konsoliohjelman, joka: 
+1. arpoo lotto-rivejä satunnaisuudella (Random)  
+2. validoi syötteitä ja heittää tarvittaessa ArgumentException  
+3. tallentaa ja lataa pelihistorian tiedostosta (File/StreamWriter) ja käsittelee 
+tiedostovirheitä try/catchilla 
+Käytettävät syntaksit/komennot (pakolliset) 
+• Random + Next(...) / Next(min,max)  
+• List<int> + Add(...) + Contains(...) + foreach (lottonumerot)  
+• try { } catch (Exception e) { } tiedostojen luku/kirjoitus  
+• throw new ArgumentException(...) parametrien validointiin  
+• File.ReadAllLines(...) / File.ReadAllText(...) ja StreamWriter / 
+File.WriteAllText(...) 
+Projektin idea (lyhyesti) 
+Ohjelma arpoo lotto-rivin (7 eri numeroa väliltä 1–40), vertailee sitä käyttäjän “omaa riviä” 
+vastaan, ja tallentaa jokaisen pelin tuloksen pelihistoriaan tiedostoon. 
+Palautettavat tiedostot 
+• Program.cs 
+• LotteryRow.cs 
+• Player.cs 
+• GameHistory.cs 
+• history.txt (automaattisesti syntyvä tiedosto) 
+IT00AK36-3008 Olio-ohjelmointi ja suunnittelu  
+Kevät 2026 
+Osa A — Satunnaisuus: Lotto-rivi (LotteryRow) 
+Tee luokka LotteryRow 
+Kenttä: 
+• private List<int> numbers; 
+Metodit: 
+• public LotteryRow() → arpoo numerot kutsumalla RandomizeNumbers() 
+• public List<int> Numbers() → palauttaa listan 
+• public bool ContainsNumber(int number) → kertoo löytyykö numero 
+• public void RandomizeNumbers() → arpoo 7 eri numeroa väliltä 1–40 
+Hyväksymiskriteerit 
+• rivissä on aina 7 kpl numeroita 
+• kaikki numerot ovat välillä 1..40 
+• samassa rivissä ei ole duplikaatteja 
+IT00AK36-3008 Olio-ohjelmointi ja suunnittelu  
+Kevät 2026 
+Osa B — Poikkeukset: Validointi 
+(ArgumentException) 
+Tee luokka Player 
+Kentät: 
+• public string Name { get; } 
+• public LotteryRow MyRow { get; } 
+Konstruktori: 
+• public Player(string name, LotteryRow myRow) 
+Validointi (pakollinen): 
+• jos name on null, tyhjä tai yli 40 merkkiä → throw new 
+ArgumentException("...")  
+• jos myRow on null → throw new ArgumentException("...") 
+Hyväksymiskriteerit 
+• virheellisellä nimellä ohjelma ei kaadu hallitsemattomasti, vaan poikkeus on järkevä 
+ja kertoo syyn 
+• validilla nimellä Player luodaan onnistuneesti 
+IT00AK36-3008 Olio-ohjelmointi ja suunnittelu  
+Kevät 2026 
+Osa C — Tiedostot + try/catch: Pelihistoria 
+Tee luokka GameHistory 
+Kentät: 
+• private string fileName; 
+• private List<string> lines; 
+Konstruktori: 
+• public GameHistory(string fileName) → tallentaa tiedoston nimen ja alustaa 
+listan 
+Metodit: 
+1. public bool Load() 
+o yrittää lukea tiedoston: File.ReadAllLines(fileName) 
+o jos onnistuu → talleta rivit lines-listaan ja palauta true 
+o jos epäonnistuu → catch (Exception e) tulosta viesti ja palauta false  
+2. public bool Save() 
+o kirjoittaa lines tiedostoon (StreamWriter tai File.WriteAllText) 
+try/catchilla 
+o palauttaa true jos onnistui, muuten false  
+3. public void AddLine(string line) 
+o lisää rivin historiaan (muistiin) 
+4. public void Print() 
+o tulostaa historian rivit foreach-loopilla 
+Hyväksymiskriteerit 
+• jos tiedostoa ei ole, Load() ei kaada ohjelmaa (palauttaa false + tulostaa virheen)  
+• Save() luo/ylikirjoittaa tiedoston ja tallentaa rivit 
+IT00AK36-3008 Olio-ohjelmointi ja suunnittelu  
+Kevät 2026 
+Osa D — Pääohjelma: peli + tallennus 
+Toteuta pelilogiikka Program.cs:ään 
+Flow: 
+1. Käynnistyessä: 
+o luo GameHistory("history.txt") 
+o kutsu Load() (jos false, jatka silti tyhjällä historialla) 
+2. Luo pelaaja: 
+o kysy nimi (tai käytä valmista arvoa) 
+o luo Player(name, myRow) 
+o ympäröi pelaajan luonti try/catch (ArgumentException e) → tulosta 
+viesti 
+3. Arvo “voittorivi”: 
+o LotteryRow winningRow = new LotteryRow(); 
+4. Laske osumat: 
+o käy pelaajan numerot läpi ja tarkista winningRow.ContainsNumber(...) 
+5. Tallenna tulos historiaan yhtenä rivinä, esim: 
+o 2026-02-18; Name=Anna; Hits=3; My=...; Win=... 
+o lisää se AddLine(...) 
+o lopuksi Save() 
+6. Tulosta historia lopuksi 
+Hyväksymiskriteerit 
+• ohjelma arpoo rivit joka ajolla eri tavalla (satunnaisuus)  
+• virheellinen nimi ei kaada ohjelmaa (ArgumentException käsitellään)  
+• historia jää talteen history.txt-tiedostoon ja latautuu seuraavalla ajolla  

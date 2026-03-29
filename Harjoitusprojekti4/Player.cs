@@ -8,7 +8,9 @@ namespace Harjoitusprojekti4
 
         public Player(string name, LotteryRow myRow)
         {
-            // TODO: Validointi + ArgumentException
+            // TODO: -
+            // DONE:
+            //  Validointi + ArgumentException
             // - name ei saa olla null/tyhjä
             // - name max 40 merkkiä
             // - myRow ei saa olla null
