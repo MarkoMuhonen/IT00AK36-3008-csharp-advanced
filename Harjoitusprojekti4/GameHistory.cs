@@ -43,6 +43,7 @@ namespace Harjoitusprojekti4
                 }
 
                 // Tiedostoa ei ole -> ei virhe, mutta ei latausta
+                Console.WriteLine("No history file found.");
                 return false;
             }
             catch (Exception e)
@@ -54,7 +55,9 @@ namespace Harjoitusprojekti4
 
         public bool Save()
         {
-            // TODO: Kirjoita tiedosto StreamWriterilla try/catchilla
+            // TODO: -
+            // DONE: 
+            // - Kirjoita tiedosto StreamWriterilla try/catchilla
             // - return true jos onnistuu, muuten false
 
             try
